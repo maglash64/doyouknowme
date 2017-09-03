@@ -35,8 +35,12 @@ namespace doyouknowme
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+
+            app.UseStaticFiles();
+
             app.UseMvc(ConfigureRoute);
+            
+           
 
             app.Run(async (context) =>
             {
