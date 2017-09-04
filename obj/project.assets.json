@@ -10024,16 +10024,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\.net.core\\doyouknowme\\doyouknowme.csproj",
+      "projectUniqueName": "D:\\Projects\\dotnetcore\\doyouknowme\\doyouknowme.csproj",
       "projectName": "doyouknowme",
-      "projectPath": "D:\\Projects\\.net.core\\doyouknowme\\doyouknowme.csproj",
-      "outputPath": "D:\\Projects\\.net.core\\doyouknowme\\obj\\",
+      "projectPath": "D:\\Projects\\dotnetcore\\doyouknowme\\doyouknowme.csproj",
+      "outputPath": "D:\\Projects\\dotnetcore\\doyouknowme\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.0"
       ],
       "files": {
-        "lib/netcoreapp1.0/doyouknowme.dll": "D:\\Projects\\.net.core\\doyouknowme\\bin\\placeholder\\netcoreapp1.0\\doyouknowme.dll"
+        "lib/netcoreapp1.0/doyouknowme.dll": "D:\\Projects\\dotnetcore\\doyouknowme\\bin\\placeholder\\netcoreapp1.0\\doyouknowme.dll"
       },
       "frameworks": {
         "netcoreapp1.0": {

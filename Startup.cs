@@ -40,12 +40,10 @@ namespace doyouknowme
             app.UseStaticFiles();
 
             app.UseMvc(ConfigureRoute);
-            
-           
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("404 : Page Not Found!");
+                await context.Response.WriteAsync("<html><body><h1 align='center'>404 : Page Not Found!</h1></body></html>");
             });
         }
     }

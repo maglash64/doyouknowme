@@ -12,18 +12,18 @@
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Roboto" rel="stylesheet">
     </head>
     <style>
-        .navi{width: 100%;display: inline-block;text-align: center;background-color: #222;/*rgb(00,100,255);*/ font-size: 32px;align-content: center;padding: 5px;}
+        .navi{width: 100%;;display: inline-block;text-align: center;background-color: #222;/*rgb(00,100,255);*/ font-size: 32px;align-content: center;padding: 5px;}
         .navi a{ font-family: 'Gloria Hallelujah',sans-serif; text-decoration: none; color: #FFF;}
-        .navi a:hover { color:#FFF;}
+        html{position: relative;min-height: 100%;}
+        footer{position: absolute;width: 100%;left: 0;bottom: 0;height: auto;color: #DDD; background-color:#222;font-weight: 100; margin:0; padding-top: 6px; padding-bottom: 6px;}
     </style>
     
-    <body style="background-color: #222">
+    <body>
         <header class="navi">
             <a href="#" alt="">DoYouKnowMe!</a>
         </header>
         @RenderBody()
-
-        <footer class="footer" style="color: #DDD; background-color:#222;font-weight: 100; margin:0; padding-top: 6px; padding-bottom: 6px;">
+        <footer>
             <div class="text-center">
                 <span class="text-muted">DallaTech &copy;</span>
             </div>
