@@ -8,7 +8,11 @@ namespace doyouknowme.Controllers
 {
     public class profileController : Controller
     {
-        public IActionResult index()
+        public IActionResult user()
+        {
+            return View();
+        }
+        public IActionResult user(int id)
         {
             return View();
         }

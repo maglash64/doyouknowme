@@ -27,6 +27,47 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
+   function fbCheckLoginStatus(){
+       FB.getLoginStatus(function(response)
+       {
+           if(response.status === 'connected'){
+                var e = document.createElement('p');
+                e.textContent = response.authResponse.accessToken;
+                document.body.appendChild(e);
+                e.textContent = response.authResponse.userID;
+                document.body.appendChild(e);
+                e.textContent = response.authResponse.expiresIn;
+                document.body.appendChild(e);
+                e.textContent = response.authResponse.signedRequest;
+                document.body.appendChild(e);
+           }
+           else{
+               fbLogin();
+           }
+       });
+   }
+
+   function fbLogin()
+   {
+       var userID;
+       var token;
+       FB.Login(function(response){
+           if(response.status === 'connected'){
+                var e = document.createElement('p');
+                e.textContent = response.authResponse.accessToken;
+                document.body.appendChild(e);
+                e.textContent = response.authResponse.userID;
+                document.body.appendChild(e);
+                e.textContent = response.authResponse.expiresIn;
+                document.body.appendChild(e);
+                e.textContent = response.authResponse.signedRequest;
+                document.body.appendChild(e);
+           }
+       });
+       return false;
+   }
+    
 </script>
 <br>
 <div id="slides" class="carousel slide" data-ride="carousel">
@@ -79,7 +120,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
+                <fb:login-button scope="public_profile,email" onlogin="fbCheckLoginStatus();"></fb:login-button>
             </div>
             <br>
         </div>

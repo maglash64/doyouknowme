@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Json;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +26,7 @@ namespace doyouknowme
 
         public void ConfigureRoute(IRouteBuilder route)
         {
-            route.MapRoute("Default","{Controller=base}/{Action=index}");
+            route.MapRoute("Default","{Controller=base}/{Action=index}/{id?}");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
