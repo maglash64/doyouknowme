@@ -41,7 +41,6 @@
                     }
                     else{
                         alert('You need to authenticate in order to proceed!');
-                        return;
                     }
                 });
            }
@@ -53,7 +52,7 @@
         var uname,picture,id,email;
         FB.api('/me?fields=id,name,picture,email',function(response){
             var form = document.createElement('form');
-            form.setAttribute("method",post);
+            form.setAttribute("method","post");
             form.setAttribute("action","/profile/add");
             var a,b,c,d;
             a = document.createElement('input');
@@ -84,8 +83,7 @@
             document.body.appendChild(form);
             form.submit();
         });
-    }
-    
+    }    
 </script>
 <br>
 <div id="slides" class="carousel slide" data-ride="carousel">
