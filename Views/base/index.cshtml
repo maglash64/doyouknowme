@@ -32,41 +32,59 @@
        FB.getLoginStatus(function(response)
        {
            if(response.status === 'connected'){
-                var e = document.createElement('p');
-                e.textContent = response.authResponse.accessToken;
-                document.body.appendChild(e);
-                e.textContent = response.authResponse.userID;
-                document.body.appendChild(e);
-                e.textContent = response.authResponse.expiresIn;
-                document.body.appendChild(e);
-                e.textContent = response.authResponse.signedRequest;
-                document.body.appendChild(e);
+                appLogin();
            }
            else{
-               fbLogin();
+                FB.Login(function(response){
+                    if(response.status === 'connected'){
+                        appLogin();
+                    }
+                });
+                else{
+                    alert('You need to authenticate in order to proceed!');
+                    return;
+                }
            }
        });
    }
 
-   function fbLogin()
-   {
-       var userID;
-       var token;
-       FB.Login(function(response){
-           if(response.status === 'connected'){
-                var e = document.createElement('p');
-                e.textContent = response.authResponse.accessToken;
-                document.body.appendChild(e);
-                e.textContent = response.authResponse.userID;
-                document.body.appendChild(e);
-                e.textContent = response.authResponse.expiresIn;
-                document.body.appendChild(e);
-                e.textContent = response.authResponse.signedRequest;
-                document.body.appendChild(e);
-           }
-       });
-       return false;
-   }
+    function appLogin()
+    {
+        var uname,picture,id,email;
+        FB.api('/me?fields=id,name,picture,email',function(response){
+            var form = document.createElement('form');
+            form.setAttribute("method",post);
+            form.setAttribute("action","/profile/add");
+            var a,b,c,d;
+            a = document.createElement('input');
+            b = document.createElement('input');
+            c = document.createElement('input');
+            d = document.createElement('input');
+
+            a.setAttribute("type","hidden");
+            a.setAttribute("name","uname")
+            a.setAttribute("value",response.name);
+            form.appendChild(a);
+
+            b.setAttribute("type","hidden");
+            b.setAttribute("name","id")
+            b.setAttribute("value",response.id);
+            form.appendChild(b);
+
+            c.setAttribute("type","hidden");
+            c.setAttribute("name","picture")
+            c.setAttribute("value",response.picture);
+            form.appendChild(c);
+
+            d.setAttribute("type","hidden");
+            d.setAttribute("name","email")
+            d.setAttribute("value",response.email);
+            form.appendChild(d);
+
+            document.body.appendChild(form);
+            form.submit();
+        });
+    }
     
 </script>
 <br>
