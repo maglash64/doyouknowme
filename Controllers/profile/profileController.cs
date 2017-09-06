@@ -21,7 +21,7 @@ namespace doyouknowme.Controllers
             ViewBag.name = profile.uname;
             ViewBag.id = profile.id;
             ViewBag.email = profile.email;
-            ViewBag.picture = profile.picture;
+            ViewBag.picture = "src=" + profile.picture;
             return View("user");
         }
     }
