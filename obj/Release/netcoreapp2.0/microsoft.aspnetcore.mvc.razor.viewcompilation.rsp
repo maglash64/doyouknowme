@@ -1,0 +1,7 @@
+D:\Projects\dotnetcore\doyouknowme
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=doyouknowme
+--content-root=D:\Projects\dotnetcore\doyouknowme
+--file=D:\Projects\dotnetcore\doyouknowme\Views\base\index.cshtml
+--file=D:\Projects\dotnetcore\doyouknowme\Views\profile\user.cshtml
+--file=D:\Projects\dotnetcore\doyouknowme\Views\Shared\_layout.cshtml
