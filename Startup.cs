@@ -34,9 +34,11 @@ namespace doyouknowme
         {
             loggerFactory.AddConsole();
 
+            app.UseDeveloperExceptionPage();
+            
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                
             }
 
             app.UseStaticFiles();

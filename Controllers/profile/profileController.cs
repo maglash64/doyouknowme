@@ -10,12 +10,6 @@ namespace doyouknowme.Controllers
     public class profileController : Controller
     {
         [HttpGet]
-        public IActionResult user()
-        {
-            return View("user");
-        }
-
-        [HttpGet]
         public IActionResult user(int id)
         {
             return View("user");
