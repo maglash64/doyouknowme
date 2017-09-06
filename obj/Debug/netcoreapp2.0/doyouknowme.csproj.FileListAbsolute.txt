@@ -1,0 +1,10 @@
+D:\Projects\dotnetcore\doyouknowme\bin\Debug\netcoreapp2.0\doyouknowme.deps.json
+D:\Projects\dotnetcore\doyouknowme\bin\Debug\netcoreapp2.0\doyouknowme.runtimeconfig.json
+D:\Projects\dotnetcore\doyouknowme\bin\Debug\netcoreapp2.0\doyouknowme.runtimeconfig.dev.json
+D:\Projects\dotnetcore\doyouknowme\bin\Debug\netcoreapp2.0\doyouknowme.dll
+D:\Projects\dotnetcore\doyouknowme\bin\Debug\netcoreapp2.0\doyouknowme.pdb
+D:\Projects\dotnetcore\doyouknowme\obj\Debug\netcoreapp2.0\doyouknowme.csproj.CoreCompileInputs.cache
+D:\Projects\dotnetcore\doyouknowme\obj\Debug\netcoreapp2.0\doyouknowme.AssemblyInfoInputs.cache
+D:\Projects\dotnetcore\doyouknowme\obj\Debug\netcoreapp2.0\doyouknowme.AssemblyInfo.cs
+D:\Projects\dotnetcore\doyouknowme\obj\Debug\netcoreapp2.0\doyouknowme.dll
+D:\Projects\dotnetcore\doyouknowme\obj\Debug\netcoreapp2.0\doyouknowme.pdb
