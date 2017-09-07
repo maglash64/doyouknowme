@@ -3,11 +3,15 @@
      Layout = "~/Views/Shared/_layout.cshtml";
 }
 
-<p>
-    Hello @ViewBag.name ! <br>
-    Your email is : @ViewBag.email <br>
-    your id is : @ViewBag.id <br>
-    your pic is : @ViewBag.picture;
-    Thank You!
-</p>
+<div class="container-fluid" style="background-color: cornflowerblue; display: flex; padding: 15px;">
+    <img style="border-radius: 50%; background: white; padding: 5px; height: 128px; width: 128px;" @ViewBag.picture>
+    <div style="font-family: Ubuntu; font-weight: 100; font-size: 36px; color:white; padding: 0 0 20px 20px;">
+         @ViewBag.name <br>
+         <span style="font-size: 24px">@ViewBag.email</span>
+    </div>
+</div>
+<div class="jumbotron jumbotron-fluid text-center">
+    <h3>Under Development</h3>
+</div>
+
 

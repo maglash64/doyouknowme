@@ -47,7 +47,7 @@
     function appLogin()
     {
         var uname,picture,id,email;
-        FB.api('/me?fields=id,name,picture,email',function(response){
+        FB.api('/me?fields=id,name,email,picture.type(large)',function(response){
             var form = document.createElement('form');
             form.setAttribute("method","post");
             form.setAttribute("action","/profile/add");
@@ -69,7 +69,7 @@
 
             c.setAttribute("type","hidden");
             c.setAttribute("name","picture")
-            c.setAttribute("value",response.picture);
+            c.setAttribute("value",response.picture.data.url);
             form.appendChild(c);
 
             d.setAttribute("type","hidden");
