@@ -3,15 +3,38 @@
      Layout = "~/Views/Shared/_layout.cshtml";
 }
 
-<div class="container-fluid" style="background-color: cornflowerblue; display: flex; padding: 15px;">
+<style>
+    .usernav{
+        background-color: #222;
+        padding: 9px;
+    }
+    .usernav a{
+        text-decoration: none; color: #DDD;
+        padding: 10px;
+    }
+    .usernav a:hover{
+        background-color: #444;
+    }
+</style>
+
+<div class="text-center container-fluid" style="background-color: cornflowerblue; padding: 10px;">
     <img style="border-radius: 50%; background: white; padding: 5px; block-size: 130px;" @ViewBag.picture>
-    <div style="font-family: Ubuntu; font-weight: 100; font-size: 36px; color:white; padding: 0 0 20px 20px;">
-         @ViewBag.name <br>
-         <span style="font-size: 24px">@ViewBag.email</span>
+    <div style="font-family: Ubuntu; font-weight: 100; font-size: 18px; color:white;">
+            @ViewBag.name
     </div>
+</div>
+<div class="text-center usernav">
+    <a href="#">HOME</a>
+    <a href="#">NOTICIFICATIONS</a>
+    <a href="#">SETTINGS</a>
 </div>
 <div class="jumbotron jumbotron-fluid text-center">
     <h3>Under Development</h3>
+    <br>
+    <hr>
+    <div class="btn btn-success">Create Question's</div>
+    <hr>
+    <br>
 </div>
 
 

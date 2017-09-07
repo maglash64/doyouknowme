@@ -18,6 +18,12 @@
       version    : 'v2.10'
     });
     FB.AppEvents.logPageView();
+
+    FB.getLoginStatus(function(response){
+        if(response.status === 'connected'){
+            appLogin();
+        }
+    });
   };
 
   (function(d, s, id){
@@ -28,20 +34,13 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-   function fbCheckLoginStatus(){
-       FB.getLoginStatus(function(response)
-       {
-           if(response.status === 'connected'){
+   function fbLogin(){
+       FB.Login(function(response){
+            if(response.status === 'connected'){
                 appLogin();
-           }
-           else{
-                FB.Login(function(response){
-                    if(response.status === 'connected'){
-                        appLogin();
-                    }
-                });
-           }
-       });
+            }
+        });
+
    }
 
     function appLogin()
@@ -133,7 +132,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <fb:login-button scope="public_profile,email" data-size="large" data-button-type="continue_with" data-use-continue-as="true" onlogin="fbCheckLoginStatus();"></fb:login-button>
+                <fb:login-button scope="public_profile,email" data-size="large" data-button-type="continue_with" data-use-continue-as="true" onlogin="fbLogin();"></fb:login-button>
             </div>
             <br>
         </div>
